@@ -27,28 +27,51 @@ export default [
     component: './Welcome',
   },
   {
-    path: '/admin',
-    name: 'admin',
-    icon: 'crown',
-    access: 'canAdmin',
+    path: '/particle',
+    name: '粒子',
     routes: [
       {
-        path: '/admin',
-        redirect: '/admin/sub-page',
+        path: '/particle',
+        redirect: '/particle/01',
       },
       {
-        path: '/admin/sub-page',
-        name: 'sub-page',
-        component: './Admin',
+        path: '/particle/01',
+        name: '初识Points与点材质',
+        component: './particle/01',
+      },
+      {
+        path: '/particle/02',
+        name: 'Points打造星河',
+        component: './particle/02',
+      },
+      {
+        path: '/particle/03',
+        name: '漫天雪花',
+        component: './particle/03',
+      },
+      {
+        path: '/particle/04',
+        name: '旋星系',
+        component: './particle/04',
       },
     ],
   },
   {
-    name: 'list.table-list',
-    icon: 'table',
-    path: '/list',
-    component: './TableList',
+    path: '/rayCasting',
+    name: '光线投射',
+    routes: [
+      {
+        path: '/rayCasting',
+        redirect: '/rayCasting/01',
+      },
+      {
+        path: '/rayCasting/01',
+        name: '光线投射与物体交互',
+        component: './rayCasting/01',
+      },
+    ],
   },
+
   {
     path: '/',
     redirect: '/welcome',
